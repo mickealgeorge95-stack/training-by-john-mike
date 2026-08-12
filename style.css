@@ -293,3 +293,29 @@ body {
     align-items: center;
   }
 }
+@media (max-width: 768px) {
+    .pricing-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 16px;
+        padding: 10px 4px 25px;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .pricing-card {
+        flex: 0 0 82%;
+        min-width: 82%;
+        scroll-snap-align: start;
+    }
+
+    /* Hide scrollbar */
+    .pricing-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .pricing-grid {
+        scrollbar-width: none;
+    }
+}
